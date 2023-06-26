@@ -219,7 +219,7 @@ header .nav-bar {
   font-size: 4em;
   font-weight: 700;
   text-shadow: var(--text-shadow);
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   transform: translateY(-50px);
   opacity: 0;
 }
@@ -247,6 +247,24 @@ header .nav-bar {
 
 .swiper-slide-active .text-content p {
   transform: translateX(0px);
+  opacity: 1;
+  transition: 1s ease;
+  transition-delay: 0.3s;
+  transition-property: transform, opacity;
+}
+
+.swiper-slide .text-content i {
+  position: relative;
+  margin-top: 25px;
+  font-size: 35px;
+  color: yellow;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.swiper-slide-active .text-content i {
+  transform: translateY(0px);
   opacity: 1;
   transition: 1s ease;
   transition-delay: 0.3s;
@@ -758,7 +776,7 @@ hr {
   }
 
   .bg-slider-thumbs {
-    bottom: 3em;
+    bottom: 4.5em;
   }
 }
 
@@ -804,6 +822,11 @@ hr {
 
   .swiper-slide .text-content p {
     font-size: 1em;
+  }
+
+  .swiper-slide .text-content i {
+    font-size: 25px;
+    margin-top: 5px;
   }
 
   /* Navigation menu */
