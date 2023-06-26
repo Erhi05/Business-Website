@@ -8,7 +8,6 @@ gsap.fromTo(
     delay: 1.5,
   }
 );
-
 gsap.fromTo(
   ".logo-name",
   {
@@ -22,7 +21,6 @@ gsap.fromTo(
     delay: 2.5,
   }
 );
-
 window.addEventListener("load", function () {
   setTimeout(removeLoader, 1000); // Wait for page load plus two seconds.
 });
@@ -34,11 +32,9 @@ function removeLoader() {
     $(".loadingDiv").remove(); // Makes the page more lightweight
   });
 }
-
 $(document).ready(function () {
   $(this).scrollTop(0);
 });
-
 // Swiper slider
 var swiper = new Swiper(".bg-slider-thumbs", {
   loop: true,
@@ -58,24 +54,19 @@ window.addEventListener("scroll", function () {
   const header = document.querySelector("header");
   header.classList.toggle("sticky", this.window.scrollY > 0);
 });
-
 // Responsive navigation menu toggle
 const menuBtn = document.querySelector(".nav-menu-btn");
 const closeBtn = document.querySelector(".nav-close-btn");
 const navigation = document.querySelector(".navigation");
-
 const navLinks = document.querySelectorAll(".navigation .nav-items a");
-
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     navigation.classList.remove("active");
   });
 });
-
 menuBtn.addEventListener("click", () => {
   navigation.classList.add("active");
 });
-
 closeBtn.addEventListener("click", () => {
   navigation.classList.remove("active");
 });
@@ -83,20 +74,16 @@ closeBtn.addEventListener("click", () => {
 //Project filter section
 let list = document.querySelectorAll(".list");
 let itemBox = document.querySelectorAll(".itemBox");
-
 for (let i = 0; i < list.length; i++) {
   list[i].addEventListener("click", function () {
     for (let j = 0; j < list.length; j++) {
       list[j].classList.remove("active");
     }
     this.classList.add("active");
-
     let dataFilter = this.getAttribute("data-filter");
-
     for (let k = 0; k < itemBox.length; k++) {
       itemBox[k].classList.remove("active");
       itemBox[k].classList.add("hide");
-
       if (
         itemBox[k].getAttribute("data-item") == dataFilter ||
         dataFilter == "all"
@@ -119,7 +106,6 @@ function loadpage() {
       }
     });
   });
-
   const hiddenElements = document.querySelectorAll(".hidden-mode");
   hiddenElements.forEach((el) => observer.observe(el));
 }
