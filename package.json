@@ -12,6 +12,7 @@
     "vite": "^4.3.2"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.0.1",
     "swiper": "^9.3.2"
   }
 }
