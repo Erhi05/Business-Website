@@ -452,6 +452,19 @@ header .nav-bar {
   transform: scale(0.95);
 }
 
+/*Products */
+.hidden-mode {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-50%);
+  transition: all 0.7s;
+}
+.show-mode {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -485,7 +498,8 @@ header .nav-bar {
 }
 
 .back h2 {
-  margin-left: -130px;
+  margin-left: -135px;
+  padding-top: 10px;
   letter-spacing: 2px;
   color: white;
   z-index: 10;
@@ -510,13 +524,13 @@ header .nav-bar {
 }
 
 .text-ctr {
-  width: 80%;
-  margin-top: 30px;
+  width: 90%;
+  margin-top: 35px;
   z-index: 1;
 }
 
 .text-ctr h2 {
-  font-size: 18px;
+  font-size: 20px;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 0;
@@ -527,7 +541,7 @@ header .nav-bar {
 }
 
 .text-ctr p {
-  padding-top: 10px;
+  padding-top: 20px;
   font-size: 16px;
   color: white;
   letter-spacing: 1px;
@@ -1040,6 +1054,10 @@ hr {
 
   .swiper-slide .text-content .title span {
     top: 0.001px;
+  }
+
+  .text-ctr h2 {
+    font-size: 17px;
   }
 }
 

@@ -111,25 +111,4 @@ function loadpage() {
 }
 
 
-function loadProductPage() {
-  const productPage = document.getElementById("product-page");
-  const xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-      if (xhr.status === 200) {
-        productPage.innerHTML = xhr.responseText;
-      } else {
-        console.error("Failed to load product page: " + xhr.status);
-      }
-    }
-  };
-  xhr.open("GET", "product.html", true);
-  xhr.send();
-}
 
-// Event listener for the product button
-const productButton = document.getElementById("product-button");
-productButton.addEventListener("click", function (event) {
-  event.preventDefault(); // Prevent the form submission
-  loadProductPage();
-});
