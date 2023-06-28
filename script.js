@@ -1,5 +1,3 @@
-import "./router";
-
 gsap.fromTo(
   ".loading-page",
   { opacity: 1 },
