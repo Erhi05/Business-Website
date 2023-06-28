@@ -109,6 +109,3 @@ function loadpage() {
   const hiddenElements = document.querySelectorAll(".hidden-mode");
   hiddenElements.forEach((el) => observer.observe(el));
 }
-
-
-

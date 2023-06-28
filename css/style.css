@@ -387,17 +387,17 @@ header .nav-bar {
 
 .product-button {
   position: relative;
-  margin-top: 10px;
+  margin-top: 20px;
+  padding: 20px;
   width: 100%;
   text-align: center;
 }
 
 .cta {
   position: relative;
+  text-decoration: none;
   margin: auto;
   padding: 12px 18px;
-  transition: all 0.2s ease;
-  margin-top: 10px;
   bottom: 10px;
   border: none;
   background: none;
