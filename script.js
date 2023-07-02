@@ -2,8 +2,6 @@ gsap.fromTo(
   ".loading-page",
   { opacity: 1 },
   {
-    opacity: 0,
-    display: "none",
     duration: 1.5,
     delay: 1.5,
   }
@@ -16,17 +14,15 @@ gsap.fromTo(
   },
   {
     y: 0,
-    opacity: 0,
-    duration: 2,
-    delay: 2.5,
+    duration: 1,
   }
 );
 window.addEventListener("load", function () {
-  setTimeout(removeLoader, 1000); // Wait for page load plus two seconds.
+  setTimeout(removeLoader, 1000); // Wait for page load plus one seconds.
 });
 
 function removeLoader() {
-  $(".loading-page").fadeOut(100, function () {
+  $(".loading-page").fadeOut(200, function () {
     // FadeOut complete. Remove the loading div
     loadpage();
     $(".loadingDiv").remove(); // Makes the page more lightweight
