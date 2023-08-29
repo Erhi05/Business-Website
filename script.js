@@ -13,12 +13,12 @@ gsap.fromTo(
     opacity: 1,
   },
   {
-    y: 0,
+    y: 10,
     duration: 1,
   }
 );
 window.addEventListener("load", function () {
-  setTimeout(removeLoader, 1000); // Wait for page load plus one seconds.
+  setTimeout(removeLoader, 1200); // Wait for page load plus 1.2 seconds.
 });
 
 function removeLoader() {
@@ -97,11 +97,16 @@ function loadpage() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show-mode");
-      } else {
-        entry.target.classList.remove("show-mode");
       }
     });
   });
   const hiddenElements = document.querySelectorAll(".hidden-mode");
   hiddenElements.forEach((el) => observer.observe(el));
 }
+
+ScrollReveal({ reset: true });
+ScrollReveal().reveal('.product-card');
+ScrollReveal().reveal('.project');
+ScrollReveal().reveal('.form-container');
+ScrollReveal().reveal('.map', { delay: 400 });
+ScrollReveal().reveal('.footer');
