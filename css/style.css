@@ -47,57 +47,27 @@ ul {
 }
 
 body {
-  background: rgb(44, 46, 66);
-}
+  background: hsla(180, 3%, 11%, 1);
 
-.load-container {
-  background-color: black;
-  color: #fff;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
+  background: linear-gradient(
+    135deg,
+    hsla(180, 3%, 11%, 1) 0%,
+    hsla(280, 4%, 48%, 1) 100%
+  );
 
-.loading-page {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: center;
-  justify-content: center;
-  color: #191654;
-}
+  background: -moz-linear-gradient(
+    135deg,
+    hsla(180, 3%, 11%, 1) 0%,
+    hsla(280, 4%, 48%, 1) 100%
+  );
 
-.loading-page svg {
-  width: 170px;
-  height: 170px;
-  margin-left: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  background: -webkit-linear-gradient(
+    135deg,
+    hsla(180, 3%, 41%, 1) 0%,
+    hsla(280, 4%, 28%, 1) 100%
+  );
 
-.name-container {
-  height: 30px;
-}
-
-.name-container .logo-name {
-  color: #f6f6f6;
-  font-size: 20px;
-  letter-spacing: 12px;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bolder;
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1C1E1E", endColorstr="#7D7780", GradientType=1 );
 }
 
 .section {
@@ -105,18 +75,6 @@ body {
   background: var(--section-bg-color);
   padding: 35px 200px;
   transition: 0.3s ease;
-}
-
-.hidden-mode {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateX(-50%);
-}
-
-.show-mode {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
 }
 
 /* Header */
@@ -749,7 +707,7 @@ strong {
   text-align: center;
 }
 
-hr{
+hr {
   border-color: rgba(255, 255, 255, 0.6);
 }
 

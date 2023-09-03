@@ -1,36 +1,3 @@
-gsap.fromTo(
-  ".loading-page",
-  { opacity: 1 },
-  {
-    duration: 1.5,
-    delay: 1.5,
-  }
-);
-gsap.fromTo(
-  ".logo-name",
-  {
-    y: 50,
-    opacity: 1,
-  },
-  {
-    y: 10,
-    duration: 1,
-  }
-);
-window.addEventListener("load", function () {
-  setTimeout(removeLoader, 1200); // Wait for page load plus 1.2 seconds.
-});
-
-function removeLoader() {
-  $(".loading-page").fadeOut(200, function () {
-    // FadeOut complete. Remove the loading div
-    loadpage();
-    $(".loadingDiv").remove(); // Makes the page more lightweight
-  });
-}
-$(document).ready(function () {
-  $(this).scrollTop(0);
-});
 // Swiper slider
 var swiper = new Swiper(".bg-slider-thumbs", {
   loop: true,
@@ -91,22 +58,10 @@ for (let i = 0; i < list.length; i++) {
   });
 }
 
-// Animation
-function loadpage() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show-mode");
-      }
-    });
-  });
-  const hiddenElements = document.querySelectorAll(".hidden-mode");
-  hiddenElements.forEach((el) => observer.observe(el));
-}
-
 ScrollReveal({ reset: true });
-ScrollReveal().reveal('.product-card');
-ScrollReveal().reveal('.project');
-ScrollReveal().reveal('.form-container');
-ScrollReveal().reveal('.map', { delay: 400 });
-ScrollReveal().reveal('.footer');
+ScrollReveal().reveal(".home");
+ScrollReveal().reveal(".product-card");
+ScrollReveal().reveal(".project");
+ScrollReveal().reveal(".form-container");
+ScrollReveal().reveal(".map", { delay: 400 });
+ScrollReveal().reveal(".footer");
